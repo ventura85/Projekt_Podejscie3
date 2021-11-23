@@ -5,6 +5,9 @@ namespace Projekt_Programowanie.MainMenuFiles
 {
     public class MenuOptions : IDisplayMsg
     {
+        /// <summary>
+        /// String To Show
+        /// </summary>
         string[] messeges = {
             "\t\t..::: MENU:::..",
             "1. Prezentacja Alfanumeryczna",
@@ -12,6 +15,10 @@ namespace Projekt_Programowanie.MainMenuFiles
             "3. Analiza Czasów Sortowania",
             "0. Zakończenie programu"
         };
+
+        /// <summary>
+        /// Display Menu Options
+        /// </summary>
         public void DisplayMsg()
         {
             int x, y;

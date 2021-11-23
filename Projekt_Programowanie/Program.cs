@@ -382,7 +382,6 @@ namespace Projekt_Programowanie
             int yPos = 4;
             int xPos = 0;
             bool wasSwap;
-            bool breakPoint = false;
             int iteration = 1;
             int endPosition = 0;
 
@@ -394,7 +393,7 @@ namespace Projekt_Programowanie
                     xPos = 50;
                     yPos = 4;
                 }
-                if (breakPoint) break;
+
                 // "TopFrame":
                 Position(xPos, yPos);
                 //change font color to Yellow and draw top frame
@@ -419,14 +418,14 @@ namespace Projekt_Programowanie
                 yPos++;
 
 
-                wasSwap = false;
+                bool breakPoint = true;
                 for (int i = 0; i < j; i++)
                 {
-
+                    wasSwap = false;
                     if (array[i] > array[i + 1])
                     {
                         (array[i], array[i + 1]) = (array[i + 1], array[i]);
-                        wasSwap = true;
+                        breakPoint = false;
 
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Position(xPos, yPos);
@@ -453,14 +452,14 @@ namespace Projekt_Programowanie
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.Write("\u2502");
                         yPos++;
-
+                        wasSwap = true;
                     }
-                    else
+                    Position(xPos, yPos);
+                    if (wasSwap == false)
                     {
-
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Position(xPos, yPos);
-                        Console.WriteLine(String.Format("\u2502 Zamiana:  Brak    \u2502"));
+                        Console.WriteLine("\u2502 Zamiana:  Brak    \u2502");
+                        Position(xPos + 22, yPos);
                         //change font color to Blue and show values smaller than int i
                         Console.ForegroundColor = ConsoleColor.Blue;
                         Position(xPos + 22, yPos);
@@ -483,7 +482,6 @@ namespace Projekt_Programowanie
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.Write("\u2502");
                         yPos++;
-
                     }
                 }
                 //"BottomFrame":
@@ -498,8 +496,8 @@ namespace Projekt_Programowanie
                 }
                 yPos++;
                 iteration++;
-                if (wasSwap == false) breakPoint = true;
 
+                if (breakPoint) break;
             }
             Position(0, endPosition);
         }

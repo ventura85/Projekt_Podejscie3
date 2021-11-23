@@ -6,6 +6,7 @@ namespace Projekt_Programowanie.Infrastructure
 {
     public class CreateCustomArray
     {
+
         IStringToInt convert;
         int[] output;
         int xPos, yPos;
@@ -16,12 +17,17 @@ namespace Projekt_Programowanie.Infrastructure
             convert = convertFactory();
             output = new int[size];
 
+            Console.Write("Podaj Liczbę: ");
+
+            //Takes cursor actual position so we can go back to this position  
             (xPos, yPos) = Console.GetCursorPosition();
+
             for (int i = 0; i < output.Length; i++)
             {
 
                 output[i] = convert.ConvertStringToInt(Console.ReadLine(), xPos, yPos,  min,  max);
             }
+
             return output;
         }
     }

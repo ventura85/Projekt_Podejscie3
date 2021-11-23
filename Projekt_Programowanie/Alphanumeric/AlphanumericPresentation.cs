@@ -1,6 +1,5 @@
 ﻿using Projekt_Programowanie.Infrastructure;
 using Projekt_Programowanie.MainMenuFiles;
-using Projekt_Programowanie.UserInterfaceCommunication;
 using System;
 
 namespace Projekt_Programowanie.Alphanumeric
@@ -22,8 +21,10 @@ namespace Projekt_Programowanie.Alphanumeric
             () => new AlphanumericIntroduction(),
             () => new AlphanumericOptions());
 
+            //Create default repository so we can display default numbers stored in array
             int[] defaultRepository = new DefaultArray().Repository;
           
+            //Display array using colors
             for (int i = 0; i < defaultRepository.Length; i++)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -31,35 +32,13 @@ namespace Projekt_Programowanie.Alphanumeric
                 Console.ForegroundColor = ConsoleColor.White;
             }
 
+            //Ask user if he want to chenge repository numbers
             Console.SetCursorPosition(xPos, 15 );
-            Console.Write("Czy chcesz zmienić liczby? T/N");
-            ConsoleKey userChoice = Console.ReadKey(true).Key;
+            Console.Write("Czy chcesz zmienić liczby? T/N");         
             Console.SetCursorPosition(xPos, 16);
-
-            if (userChoice == ConsoleKey.T)
-            {
-                Console.Write("Podaj Liczbę: ");
-                defaultRepository = new CreateCustomArray().CustomArray(
-                    defaultRepository.Length, 
-                    () => new StringToIntConverter(),
-                    0, 99
-                    );
-
-                for (int i = 0; i < defaultRepository.Length; i++)
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write(defaultRepository[i] + " ");
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
-                Console.ReadKey();
-            }
-            else if (userChoice == ConsoleKey.N)
-            {
-                Console.WriteLine("nie");
-                Console.ReadKey();
-            }
-            else return true;
-            return false;
+            
+            //Takie user to specific localisation, in this case it switch to New Array Creator or to StartVisualisation
+            return navigate.NavigateTo(Console.ReadKey(true).Key);
         }
     }
 }

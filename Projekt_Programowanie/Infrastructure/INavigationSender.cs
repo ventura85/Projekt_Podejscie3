@@ -8,6 +8,11 @@ namespace Projekt_Programowanie.MainMenuFiles
 {
     public interface INavigationSender
     {
+        /// <summary>
+        /// Used to switch between categories. Takes user to specific content
+        /// </summary>
+        /// <param name="userChoice"></param>
+        /// <returns></returns>
         public bool NavigateTo(ConsoleKey userChoice);
     }
 }

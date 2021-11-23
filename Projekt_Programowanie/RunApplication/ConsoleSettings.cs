@@ -6,6 +6,10 @@ namespace Projekt_Programowanie.RunApplication
 {
     public static class ConsoleWindowSettings
     {
+
+        /// <summary>
+        /// Sets up buffor size and window size. Also checks if user is using MS WINDOWS  
+        /// </summary>
         public static void SetConsoleProperties()
         {
 
