@@ -1,5 +1,5 @@
 ﻿using Projekt_Programowanie.Extensions;
-using System.Threading.Tasks;
+
 
 namespace Projekt_Programowanie.SortingAlghoritms
 {
@@ -11,26 +11,21 @@ namespace Projekt_Programowanie.SortingAlghoritms
         /// <param name="repository"></param>
         public void SortAlghoritm(int[] repository)
         {
-            TaskSort(repository);
-        }
-        private async Task TaskSort(int[] repository)
-        {
 
             int p = 0;
             for (int j = repository.Length - 1; j > 0; j--)
             {
                 p = 1;
-                await Task.Run(() =>
+                for (int i = 0; i < j; i++)
                 {
-                    for (int i = 0; i < j; i++)
+                    if (repository[i] > repository[i + 1])
                     {
-                        if (repository[i] > repository[i + 1])
-                        {
-                            repository.Swap(i, 1);
-                            p = 0;
-                        }
+                        repository.Swap(i, 1);
+                        p = 0;
                     }
-                });
+                }
+
+                if (p == 1) break;
             }
         }
     }

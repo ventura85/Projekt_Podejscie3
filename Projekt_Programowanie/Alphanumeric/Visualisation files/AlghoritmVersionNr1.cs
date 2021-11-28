@@ -53,13 +53,13 @@ namespace Projekt_Programowanie.Alphanumeric.Visualisation_files
                 }
 
                 //Display Top Frame, mid frame and show iteration info
-                table.TableFameTop(frameLength, xPos, ref yPos);
+                table.TableFrameTop(frameLength, xPos, ref yPos);
                                
 
                 for (int i = 0; i < _repo.Length - 1; i++)
                 {
 
-                    table.TableFameMid();
+                    table.TableFrameMid();
                     if (i == 0) Console.Write(new IterationString().iterationMsg(iterationCounter));
                     else Console.SetCursorPosition(xPos + new IterationString().iterationMsg(10).Length + 1, yPos);
 
@@ -79,11 +79,11 @@ namespace Projekt_Programowanie.Alphanumeric.Visualisation_files
                         new ColoredRepo().DisplayColoredRepo(_repo, i, ref yPos, ConsoleColor.Blue, ConsoleColor.Blue);
                     }
 
-                    table.TableFameMid();
+                    table.TableFrameMid();
                     Console.SetCursorPosition(xPos, yPos);
                 }
                 iterationCounter++;
-                table.TableFameBottom(frameLength, xPos, ref yPos);
+                table.TableFrameBottom(frameLength, xPos, ref yPos);
             }
 
             //-------------------------------------------------------

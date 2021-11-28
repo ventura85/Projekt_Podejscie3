@@ -1,4 +1,5 @@
 ﻿using Projekt_Programowanie.Alphanumeric;
+using Projekt_Programowanie.GraphicRepresentation;
 using System;
 
 namespace Projekt_Programowanie.MainMenuFiles
@@ -27,7 +28,12 @@ namespace Projekt_Programowanie.MainMenuFiles
 
                      // Go to Graphic Presentation by choosing 2 key
                 case ConsoleKey.D2:
-
+                    while (
+                        new GraphicPresentation().CategoryContent(
+                         () => new DisplayCategoryInfoPage(),
+                          () => new GraphicNavigate()
+                          )) ;
+                    break;
                     break;
 
                     // Go to by Time Span by choosing 3 key

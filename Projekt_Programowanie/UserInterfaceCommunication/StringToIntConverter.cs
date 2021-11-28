@@ -32,8 +32,8 @@ namespace Projekt_Programowanie.UserInterfaceCommunication
                 //If was in range Save it in repository
                 Console.SetCursorPosition(xPos, yPos);
                 ClearLine(50);
-                Console.SetCursorPosition(xPos, yPos + 1);
-                Console.Write("Zapisano w tablicy !                          ");
+                Console.SetCursorPosition(xPos, yPos + 1);                      
+                Console.Write("Zapisano!                                     ");
                 Console.SetCursorPosition(xPos, yPos);
                 return outputValue;
             }
