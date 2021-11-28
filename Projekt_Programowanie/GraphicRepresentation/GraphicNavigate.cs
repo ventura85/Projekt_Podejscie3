@@ -1,4 +1,5 @@
 ﻿using Projekt_Programowanie.MainMenuFiles;
+using Projekt_Programowanie.UserInterfaceCommunication;
 using System;
 
 
@@ -18,7 +19,17 @@ namespace Projekt_Programowanie.GraphicRepresentation
                 case ConsoleKey.T:
 
                     Console.SetCursorPosition(xPos, yPos);
-                    Console.WriteLine("Podaj ilość liczb od 2 do 40");
+                    Console.Write("Podaj ilość liczb od 2 do 40: ");
+
+                    (xPos, yPos) = Console.GetCursorPosition();
+                    new GraphicVisualizer().show(
+                        new StringToIntConverter().ConvertStringToInt(
+                            Console.ReadLine(),
+                            xPos, yPos,
+                            2, 40
+                            ),
+                       () => new graphBar());
+
                     Console.ReadKey();
                     return false;
 

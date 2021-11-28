@@ -10,7 +10,7 @@ namespace Projekt_Programowanie.Infrastructure
         /// Fills array with random numbers
         /// </summary>
         /// <param name="array"></param>
-        public void DrawNumbers(int[] array)
+        public static void DrawNumbers(int[] array)
         {
             int n = array.Length;
             int k = array.Length;

@@ -2,7 +2,7 @@
 
 namespace Projekt_Programowanie.GraphicRepresentation
 {
-    public  class GraphBar
+    public  class graphBar : IGraphBar
     {
 
         /// <summary>

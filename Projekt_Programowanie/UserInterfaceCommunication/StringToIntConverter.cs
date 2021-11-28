@@ -69,8 +69,8 @@ namespace Projekt_Programowanie.UserInterfaceCommunication
                         outputValue <= max)
                     {
 
-                        Console.SetCursorPosition(xPos, yPos+1);
-                        Console.Write("Zapisano w tablicy !                          ");
+                        Console.SetCursorPosition(xPos, yPos+1);                      
+                        Console.Write("Zapisano!                                     ");
                         Console.SetCursorPosition(xPos, yPos);
                        
                     }
