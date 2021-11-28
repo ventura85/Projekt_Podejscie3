@@ -34,7 +34,10 @@ namespace Projekt_Programowanie.GraphicRepresentation
                     return false;
 
                 case ConsoleKey.N:
-
+                   
+                    new GraphicVisualizer().show(
+                        40,
+                       () => new graphBar());
                     return false;
             }
 

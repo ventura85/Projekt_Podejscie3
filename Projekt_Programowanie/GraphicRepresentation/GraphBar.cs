@@ -2,7 +2,7 @@
 
 namespace Projekt_Programowanie.GraphicRepresentation
 {
-    public  class graphBar : IGraphBar
+    public class graphBar : IGraphBar
     {
 
         /// <summary>
@@ -41,11 +41,24 @@ namespace Projekt_Programowanie.GraphicRepresentation
                     Console.SetCursorPosition(xPos, yPos);
                     Console.Write("\u2584");
                 }
+
                 yPos = yPos - 1;
-
-
             }
-           
+            //To correct
+            //Console.SetCursorPosition(xPos, 23);
+        }
+
+        public  void ClearBar(int height, int xPos, int yPos)
+        {
+
+            int newHeight = height / 2;
+
+            for (int i = 0; i < newHeight; i++)
+            {
+                Console.SetCursorPosition(xPos, yPos);
+                Console.WriteLine(" ");
+                yPos--;
+            }
         }
     }
 }
