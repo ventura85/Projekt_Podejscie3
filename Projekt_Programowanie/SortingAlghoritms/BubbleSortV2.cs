@@ -3,13 +3,13 @@ using System.Threading.Tasks;
 
 namespace Projekt_Programowanie.SortingAlghoritms
 {
-    public class BubbleSortV2 : ISortAlghoritm
+    public class BubbleSortV2 : SortAlghoritmVersion
     {
         /// <summary>
         /// Second and little better Version Of BubbleSort Alghoritm
         /// </summary>
         /// <param name="repository"></param>
-        public void SortAlghoritm(int[] repository)
+        public override void SortAlghoritm(int[] repository)
         {
 
             for (int j = repository.Length - 1; j > 0; j--)

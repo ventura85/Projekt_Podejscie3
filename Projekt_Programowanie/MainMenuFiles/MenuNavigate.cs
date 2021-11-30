@@ -1,5 +1,6 @@
 ﻿using Projekt_Programowanie.Alphanumeric;
 using Projekt_Programowanie.GraphicRepresentation;
+using Projekt_Programowanie.Timing;
 using System;
 
 namespace Projekt_Programowanie.MainMenuFiles
@@ -33,12 +34,15 @@ namespace Projekt_Programowanie.MainMenuFiles
                          () => new DisplayCategoryInfoPage(),
                           () => new GraphicNavigate()
                           )) ;
-                    break;
-                    break;
+                    break;                 
 
                     // Go to by Time Span by choosing 3 key
                 case ConsoleKey.D3:
-                   
+                    while (
+                         new TimingPresentation().CategoryContent(
+                          () => new DisplayCategoryInfoPage(),
+                           () => new TimingNavigate()
+                           )) ;
                     break;
 
                     //Pressing key 0 Ends Aplication
