@@ -18,9 +18,14 @@ namespace Projekt_Programowanie.GraphicRepresentation
             //fills repo with random numbers
             DrawRandomNumbers.DrawNumbers(repository);
 
-            int startPositionX = 25;
-            int startPositionY = 30;
+            int startPositionX = 35;
+            int startPositionY = 25;
+           
 
+            Console.Clear();
+            Console.SetCursorPosition(25, 0);
+            new GraphicTitle().DisplayMsg();
+            
             //Start Sorting Alghoritm
             for (int j = 0; j < repository.Length - 1; j++)
             {

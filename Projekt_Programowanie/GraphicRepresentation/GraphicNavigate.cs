@@ -29,8 +29,7 @@ namespace Projekt_Programowanie.GraphicRepresentation
                             2, 40
                             ),
                        () => new graphBar());
-
-                    Console.ReadKey();
+                
                     return false;
 
                 case ConsoleKey.N:
