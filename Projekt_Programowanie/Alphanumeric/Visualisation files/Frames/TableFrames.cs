@@ -5,7 +5,7 @@ namespace Projekt_Programowanie.Alphanumeric.Visualisation_files.Frames
     public class TableFrames : ITableFrame
     {
 
-        public void TableFameBottom(int length, int x, ref int y)
+        public void TableFrameBottom(int length, int x, ref int y)
         {
 
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -22,14 +22,14 @@ namespace Projekt_Programowanie.Alphanumeric.Visualisation_files.Frames
             Console.SetCursorPosition(x, y);
         }
 
-        public void TableFameMid()
+        public void TableFrameMid()
         {
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("\u2502");
         }
 
-        public void TableFameTop(int length, int x, ref int y)
+        public void TableFrameTop(int length, int x, ref int y)
         {
 
             Console.SetCursorPosition(x, y);

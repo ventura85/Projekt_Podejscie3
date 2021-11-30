@@ -59,13 +59,13 @@ namespace Projekt_Programowanie.Alphanumeric.Visualisation_files
                 
 
                 //Display Top Frame, mid frame and show iteration info
-                table.TableFameTop(frameLength, xPos, ref yPos);
+                table.TableFrameTop(frameLength, xPos, ref yPos);
 
                 breakPoint = true;
                 for (int i = 0; i < j; i++)
                 {
 
-                    table.TableFameMid();
+                    table.TableFrameMid();
                     if (i == 0) Console.Write(new IterationString().iterationMsg(iterationCounter));
                     else Console.SetCursorPosition(xPos + new IterationString().iterationMsg(10).Length + 1, yPos);
 
@@ -88,13 +88,13 @@ namespace Projekt_Programowanie.Alphanumeric.Visualisation_files
 
                     }
 
-                    table.TableFameMid();
+                    table.TableFrameMid();
                     Console.SetCursorPosition(xPos, yPos);
                     
                 }
 
                 iterationCounter++;
-                table.TableFameBottom(frameLength, xPos, ref yPos);
+                table.TableFrameBottom(frameLength, xPos, ref yPos);
                 if (breakPoint) break;
             }
 

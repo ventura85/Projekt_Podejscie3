@@ -49,14 +49,14 @@ namespace Projekt_Programowanie.Alphanumeric.Visualisation_files
             {
 
                 //Display Top Frame, mid frame and show iteration info
-                table.TableFameTop(frameLength, xPos, ref yPos);
+                table.TableFrameTop(frameLength, xPos, ref yPos);
 
                 int m = 0;
                 p = -1;
                 for (int i = pmin; i <= pmax; i++)
                 {
 
-                    table.TableFameMid();
+                    table.TableFrameMid();
                     if (m == 0) Console.Write(new IterationString().iterationMsg(iterationCounter));
                     else Console.SetCursorPosition(xPos + new IterationString().iterationMsg(10).Length + 1, yPos);
                     m++;
@@ -78,11 +78,11 @@ namespace Projekt_Programowanie.Alphanumeric.Visualisation_files
                         new ColoredRepo().DisplayColoredRepo(_repo, i, ref yPos, ConsoleColor.Blue, ConsoleColor.Blue);
                     }
 
-                    table.TableFameMid();
+                    table.TableFrameMid();
                     Console.SetCursorPosition(xPos, yPos);
                 }
 
-                table.TableFameBottom(frameLength, xPos, ref yPos);
+                table.TableFrameBottom(frameLength, xPos, ref yPos);
 
                 if (p < 0) break;
 
@@ -93,13 +93,13 @@ namespace Projekt_Programowanie.Alphanumeric.Visualisation_files
 
                 Console.SetCursorPosition(xPos2, yPos2);
                 //Display Top Frame, mid frame and show iteration info
-                table.TableFameTop(frameLength, xPos2, ref yPos2);
+                table.TableFrameTop(frameLength, xPos2, ref yPos2);
 
                 int j = 0;
                 for (int i = pmax; i >= pmin; i--)
                 {
 
-                    table.TableFameMid();
+                    table.TableFrameMid();
                     if (j == 0) Console.Write(new IterationString().iterationMsg(iterationCounter));
                     else Console.SetCursorPosition(xPos2 + new IterationString().iterationMsg(10).Length + 1, yPos2);
                     j++;
@@ -121,11 +121,11 @@ namespace Projekt_Programowanie.Alphanumeric.Visualisation_files
                         new ColoredRepo().DisplayColoredRepo(_repo, i, ref yPos2, ConsoleColor.Gray, ConsoleColor.Blue , ConsoleColor.Blue);
                     }
 
-                    table.TableFameMid();
+                    table.TableFrameMid();
                     Console.SetCursorPosition(xPos2, yPos2);
                 }
 
-                table.TableFameBottom(frameLength, xPos2, ref yPos2);
+                table.TableFrameBottom(frameLength, xPos2, ref yPos2);
                 iterationCounter++;
                 pmin = p + 1;
 
