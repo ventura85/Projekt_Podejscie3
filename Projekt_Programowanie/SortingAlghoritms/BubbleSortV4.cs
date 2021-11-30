@@ -3,13 +3,13 @@
 
 namespace Projekt_Programowanie.SortingAlghoritms
 {
-    public class BubbleSortV4 : ISortAlghoritm
+    public class BubbleSortV4 : SortAlghoritmVersion
     {
         /// <summary>
         /// Fourth (GOOD) Optimaized Version Of BubbleSort Alghoritm
         /// </summary>
         /// <param name="repository"></param>
-        public void SortAlghoritm(int[] repository)
+        public override void SortAlghoritm(int[] repository)
         {
 
             int pmin = 0; int pmax = repository.Length - 1; int p;

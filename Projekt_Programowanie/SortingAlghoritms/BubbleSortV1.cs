@@ -2,7 +2,7 @@
 
 namespace Projekt_Programowanie.SortingAlghoritms
 {
-    public class BubbleSortV1 : ISortAlghoritm
+    public class BubbleSortV1 : SortAlghoritmVersion
     {
         
 
@@ -10,7 +10,7 @@ namespace Projekt_Programowanie.SortingAlghoritms
         /// First Version Of BubbleSort Alghoritm
         /// </summary>
         /// <param name="repository"></param>
-        public void SortAlghoritm(int[] repository)
+        public override void SortAlghoritm(int[] repository)
         {
             
             for (int j = 0; j < repository.Length - 1; j++)
